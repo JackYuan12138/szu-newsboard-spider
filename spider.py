@@ -166,7 +166,6 @@ def element_filter(title_element: Tag | NavigableString, info_elements: list[Tag
                     detail[key].decompose()
             save_data.append(copy.copy(el))
 
-
     for index, el in enumerate(info_elements):
         if index < len(save_data):
             info_elements[index].replace_with(save_data[index])
@@ -224,6 +223,7 @@ def beautify_html(table_title: Tag | NavigableString | None = None, info: list[T
 
             detail['title'].a["href"] = 'https://www1.szu.edu.cn/board//' + detail['title'].a["href"]
             detail['title'].a["class"] = "fontcolor_info_normal"
+            detail['title'].a.string = detail['title'].a.get_text()
 
             # 设置附件图片链接
             if detail['link_img'].find('img'):
