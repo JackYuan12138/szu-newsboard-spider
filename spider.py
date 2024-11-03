@@ -196,7 +196,7 @@ def beautify_html(table_title: Tag | NavigableString | None = None, info: list[T
     """
     美化html文本
     :param table_title: 表格标题的html元素
-    :param notice: 表格内容的html元素
+    :param info: 表格内容的html元素
     """
     if table_title:
         table_title["class"] = "title_color"
