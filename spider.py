@@ -221,7 +221,7 @@ def beautify_html(table_title: Tag | NavigableString | None = None, info: list[T
             detail['title']["align"] = "left"
             detail['title']["width"] = "80%"
 
-            detail['title'].a["href"] = 'https://www1.szu.edu.cn/board//' + detail['title'].a["href"]
+            detail['title'].a["href"] = 'https://www1.szu.edu.cn/board/' + detail['title'].a["href"]
             detail['title'].a["class"] = "fontcolor_info_normal"
             detail['title'].a.string = detail['title'].a.get_text()
 
